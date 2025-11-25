@@ -1,0 +1,83 @@
+1--2---3-----4
+|  |   |     |
+|  |   |     |
+5--6---7-----8
+|  |   |     |
+|  |   |     |
+|  |   \     |
+9--10---11---12
+|  |     |	  \
+13-14---15----16
+
+
+//code for adjacency list:
+
+Graph g1;
+	for (int i = 0; i < 16; i++) {
+		g1.addVertix(i + 1);
+	}
+	// src = 1
+	g1.addEdge(1, 2, 2);
+	g1.addEdge(1,5,2);
+	// src = 2
+	g1.addEdge(2, 1, 2);
+	g1.addEdge(2, 3, 3);
+	g1.addEdge(2, 6, 2);
+	// src = 3
+	g1.addEdge(3, 2, 3);
+	g1.addEdge(3, 7, 2);
+	g1.addEdge(3, 4, 5);
+	// src = 4
+	g1.addEdge(4, 3, 5);
+	g1.addEdge(4, 8, 2);
+	//src = 5
+	g1.addEdge(5, 1, 2);
+	g1.addEdge(5,6,2);
+	g1.addEdge(5, 9, 3);
+	//src = 6
+	g1.addEdge(6, 2, 2);
+	g1.addEdge(6, 5, 2);
+	g1.addEdge(6, 7, 3);
+	g1.addEdge(6, 10, 3);
+	//src = 7
+	g1.addEdge(7, 3, 2);
+	g1.addEdge(7, 6, 3);
+	g1.addEdge(7, 11, 3);
+	g1.addEdge(7, 8, 5);
+	//src = 8
+	g1.addEdge(8, 4, 2);
+	g1.addEdge(8, 7, 5);
+	g1.addEdge(8, 12, 3);
+	//src= 9
+	g1.addEdge(9, 5, 3);
+	g1.addEdge(9, 10, 2);
+	g1.addEdge(9, 13, 1);
+	//src = 10
+	g1.addEdge(10, 6, 3);
+	g1.addEdge(10, 9, 2);
+	g1.addEdge(10, 14, 1);
+	//src = 11
+	g1.addEdge(11, 7, 3);
+	g1.addEdge(11, 10, 3);
+	g1.addEdge(11, 15, 1);
+	g1.addEdge(11, 12, 3);
+	//src = 12
+	g1.addEdge(12, 8, 3);
+	g1.addEdge(12, 11, 3);
+	g1.addEdge(12, 16, 1);
+	//src = 13
+	g1.addEdge(13, 9, 1);
+	g1.addEdge(13, 14, 1);
+	// src = 14
+	g1.addEdge(14, 10, 1);
+	g1.addEdge(14, 13, 1);
+	g1.addEdge(14, 15, 3);
+	//src = 15
+	g1.addEdge(15, 11, 1);
+	g1.addEdge(15, 14, 3);
+	g1.addEdge(15, 16, 5);
+	//src = 16
+	g1.addEdge(16, 12, 1);
+	g1.addEdge(16, 15, 5);
+
+	g1.writeGraphtoFile("city.csv");
