@@ -131,20 +131,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Hashmap.cpp" />
     <ClCompile Include="linkedList.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="graph.cpp" />
+    <ClCompile Include="passenger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="cityBuillder.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="djisktra.h" />
+    <ClInclude Include="Hashmap.h" />
     <ClInclude Include="linkedList.h" />
     <ClInclude Include="graph.h" />
+    <ClInclude Include="passenger.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="city.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="dsProject.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
